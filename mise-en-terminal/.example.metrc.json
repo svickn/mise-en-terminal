@@ -8,8 +8,8 @@
       ]
     },
     {
-      "name": "meteor",
-      "path": "meteor",
+      "name": "ui",
+      "path": "ui",
       "commands": [
         "ECHO ui"
       ]
