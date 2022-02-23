@@ -1,0 +1,23 @@
+{
+  "terminals": [
+    {
+      "name": "server",
+      "path": "server",
+      "commands": [
+        "ECHO server"
+      ]
+    },
+    {
+      "name": "meteor",
+      "path": "meteor",
+      "commands": [
+        "ECHO ui"
+      ]
+    },
+    {
+      "name": "extra",
+      "path": "",
+      "commands": []
+    }
+  ]
+}
