@@ -5,12 +5,12 @@ import { env } from 'process';
 import * as vscode from 'vscode';
 import { TextDecoder } from 'util';
 
-interface metrcConfig {
+interface MetrcConfig {
 	basePath?: string | null;
-	terminals: metrcTerminal[];
+	terminals: MetrcTerminal[];
 }
 
-interface metrcTerminal {
+interface MetrcTerminal {
 	name: string;
 	path?: string | null;
 	commands: string[];
@@ -31,7 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
 		var workspaceUri = vscode.workspace.getWorkspaceFolder(configUri[0]);
 		var encodedText = await vscode.workspace.fs.readFile(configUri[0]);
 		var stringOutput = new TextDecoder('utf-8').decode(encodedText);
-		var configJson : metrcConfig = JSON.parse(stringOutput);
+		var configJson : MetrcConfig = JSON.parse(stringOutput);
 
 		configJson.terminals.map(t => {
 			const terminalOptions : vscode.TerminalOptions = {
